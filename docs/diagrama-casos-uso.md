@@ -1,9 +1,6 @@
 # Diagrama de Casos de Uso - PetsHelp System
 
-
-# 🎯 Diagrama de Casos de Uso - PetsHelp
-
-## 📊 Diagrama Entidade-Relacionamento (MER)
+## Diagrama Entidade-Relacionamento (MER)
 
 ![Diagrama MER do PetsHelp](MER-diagrama.png)
 
