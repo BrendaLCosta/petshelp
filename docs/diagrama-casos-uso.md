@@ -1,68 +1,78 @@
 # Diagrama de Casos de Uso - PetsHelp System
 
-## Descrição Geral
 
-O diagrama de casos de uso representa as interações entre os atores (Coordenador e Voluntários) e as funcionalidades do sistema PetsHelp. O sistema possui dois perfis de usuário com níveis de permissão distintos.
+
+## Diagrama Entidade-Relacionamento (MER)
+
+![Diagrama MER do PetsHelp](mer-petshelp.png)
+
+*Figura 1: Diagrama Entidade-Relacionamento do sistema PetsHelp com 5 entidades principais.*
+
+---
+
+## Descriï¿½ï¿½o Geral
+
+O diagrama de casos de uso representa as interaï¿½ï¿½es entre os atores (Coordenador e Voluntï¿½rios) e as funcionalidades do sistema PetsHelp. O sistema possui dois perfis de usuï¿½rio com nï¿½veis de permissï¿½o distintos.
 
 ## Atores
 
-| Ator | Descrição |
+| Ator | Descriï¿½ï¿½o |
 |------|-----------|
-| **Coordenador** | Responsável máximo pela ONG. Possui acesso total a todas as funcionalidades do sistema, incluindo cadastros, relatórios e gestão de voluntários. |
-| **Voluntário** | Membro da equipe operacional (10 voluntários). Pode registrar doações e distribuições, consultar estoque e buscar informações, mas não pode cadastrar ou excluir dados mestres. |
-| **Sistema** | Ator não humano responsável por validações automáticas (CPF único, autenticação, logs). |
+| **Coordenador** | Responsï¿½vel mï¿½ximo pela ONG. Possui acesso total a todas as funcionalidades do sistema, incluindo cadastros, relatï¿½rios e gestï¿½o de voluntï¿½rios. |
+| **Voluntï¿½rio** | Membro da equipe operacional (10 voluntï¿½rios). Pode registrar doaï¿½ï¿½es e distribuiï¿½ï¿½es, consultar estoque e buscar informaï¿½ï¿½es, mas nï¿½o pode cadastrar ou excluir dados mestres. |
+| **Sistema** | Ator nï¿½o humano responsï¿½vel por validaï¿½ï¿½es automï¿½ticas (CPF ï¿½nico, autenticaï¿½ï¿½o, logs). |
 
-## Casos de Uso por Módulo
+## Casos de Uso por Mï¿½dulo
 
-### Módulo de Autenticação
-| ID | Caso de Uso | Atores | Descrição |
+### Mï¿½dulo de Autenticaï¿½ï¿½o
+| ID | Caso de Uso | Atores | Descriï¿½ï¿½o |
 |----|-------------|--------|-----------|
-| UC01 | Autenticar usuário | Coordenador, Voluntário | Realizar login com e-mail e senha. Sistema valida credenciais e redireciona conforme perfil. |
+| UC01 | Autenticar usuï¿½rio | Coordenador, Voluntï¿½rio | Realizar login com e-mail e senha. Sistema valida credenciais e redireciona conforme perfil. |
 
-### Módulo de Cadastros (Coordenador)
-| ID | Caso de Uso | Atores | Descrição |
+### Mï¿½dulo de Cadastros (Coordenador)
+| ID | Caso de Uso | Atores | Descriï¿½ï¿½o |
 |----|-------------|--------|-----------|
-| UC02 | Cadastrar doador | Coordenador | Inserir dados do doador: nome, CPF, e-mail, telefone, endereço. |
-| UC03 | Editar doador | Coordenador | Atualizar informações de um doador existente. |
+| UC02 | Cadastrar doador | Coordenador | Inserir dados do doador: nome, CPF, e-mail, telefone, endereï¿½o. |
+| UC03 | Editar doador | Coordenador | Atualizar informaï¿½ï¿½es de um doador existente. |
 | UC04 | Remover doador | Coordenador | Excluir (ou inativar) um doador do sistema. |
-| UC05 | Cadastrar beneficiário | Coordenador | Inserir dados do animal: nome, espécie, idade, condição de saúde, responsável. |
-| UC06 | Editar beneficiário | Coordenador | Atualizar informações de um animal cadastrado. |
-| UC07 | Remover beneficiário | Coordenador | Excluir (ou inativar) um beneficiário do sistema. |
-| UC08 | Cadastrar item | Coordenador | Inserir novo item (ração, medicamento, higiene) com nome, categoria e unidade. |
-| UC09 | Editar item | Coordenador | Atualizar informações de um item existente. |
-| UC10 | Gerenciar voluntários | Coordenador | Cadastrar, editar ou remover voluntários, definindo permissões de acesso. |
+| UC05 | Cadastrar beneficiï¿½rio | Coordenador | Inserir dados do animal: nome, espï¿½cie, idade, condiï¿½ï¿½o de saï¿½de, responsï¿½vel. |
+| UC06 | Editar beneficiï¿½rio | Coordenador | Atualizar informaï¿½ï¿½es de um animal cadastrado. |
+| UC07 | Remover beneficiï¿½rio | Coordenador | Excluir (ou inativar) um beneficiï¿½rio do sistema. |
+| UC08 | Cadastrar item | Coordenador | Inserir novo item (raï¿½ï¿½o, medicamento, higiene) com nome, categoria e unidade. |
+| UC09 | Editar item | Coordenador | Atualizar informaï¿½ï¿½es de um item existente. |
+| UC10 | Gerenciar voluntï¿½rios | Coordenador | Cadastrar, editar ou remover voluntï¿½rios, definindo permissï¿½es de acesso. |
 
-### Módulo de Registros (Coordenador e Voluntário)
-| ID | Caso de Uso | Atores | Descrição |
+### Mï¿½dulo de Registros (Coordenador e Voluntï¿½rio)
+| ID | Caso de Uso | Atores | Descriï¿½ï¿½o |
 |----|-------------|--------|-----------|
-| UC11 | Registrar doação | Coordenador, Voluntário | Registrar entrada de doação: data, item, quantidade, doador, descrição. |
-| UC12 | Registrar distribuição | Coordenador, Voluntário | Registrar saída de item para beneficiário: data, item, quantidade, beneficiário, observações. |
-| UC13 | Consultar estoque | Coordenador, Voluntário | Visualizar quantidade disponível de cada item com alerta de estoque baixo. |
+| UC11 | Registrar doaï¿½ï¿½o | Coordenador, Voluntï¿½rio | Registrar entrada de doaï¿½ï¿½o: data, item, quantidade, doador, descriï¿½ï¿½o. |
+| UC12 | Registrar distribuiï¿½ï¿½o | Coordenador, Voluntï¿½rio | Registrar saï¿½da de item para beneficiï¿½rio: data, item, quantidade, beneficiï¿½rio, observaï¿½ï¿½es. |
+| UC13 | Consultar estoque | Coordenador, Voluntï¿½rio | Visualizar quantidade disponï¿½vel de cada item com alerta de estoque baixo. |
 
-### Módulo de Consultas e Relatórios (Coordenador)
-| ID | Caso de Uso | Atores | Descrição |
+### Mï¿½dulo de Consultas e Relatï¿½rios (Coordenador)
+| ID | Caso de Uso | Atores | Descriï¿½ï¿½o |
 |----|-------------|--------|-----------|
-| UC14 | Buscar doador | Coordenador, Voluntário | Pesquisar doador por nome ou CPF com autocomplete. |
-| UC15 | Filtrar doações | Coordenador | Filtrar doações por período, item ou doador. |
-| UC16 | Gerar relatório mensal | Coordenador | Gerar relatório consolidado de entradas vs saídas por categoria. |
-| UC17 | Exportar dados | Coordenador | Exportar relatórios em formato CSV ou PDF. |
-| UC18 | Visualizar dashboard | Coordenador | Visualizar indicadores: total de doações, itens mais doados, beneficiários atendidos. |
-| UC19 | Relatório por voluntário | Coordenador | Visualizar produtividade de cada voluntário (quantas ações registrou). |
+| UC14 | Buscar doador | Coordenador, Voluntï¿½rio | Pesquisar doador por nome ou CPF com autocomplete. |
+| UC15 | Filtrar doaï¿½ï¿½es | Coordenador | Filtrar doaï¿½ï¿½es por perï¿½odo, item ou doador. |
+| UC16 | Gerar relatï¿½rio mensal | Coordenador | Gerar relatï¿½rio consolidado de entradas vs saï¿½das por categoria. |
+| UC17 | Exportar dados | Coordenador | Exportar relatï¿½rios em formato CSV ou PDF. |
+| UC18 | Visualizar dashboard | Coordenador | Visualizar indicadores: total de doaï¿½ï¿½es, itens mais doados, beneficiï¿½rios atendidos. |
+| UC19 | Relatï¿½rio por voluntï¿½rio | Coordenador | Visualizar produtividade de cada voluntï¿½rio (quantas aï¿½ï¿½es registrou). |
 
-### Módulo de Auditoria (Coordenador)
-| ID | Caso de Uso | Atores | Descrição |
+### Mï¿½dulo de Auditoria (Coordenador)
+| ID | Caso de Uso | Atores | Descriï¿½ï¿½o |
 |----|-------------|--------|-----------|
-| UC20 | Gerar comprovante | Coordenador | Emitir comprovante de doação para enviar ao doador. |
-| UC21 | Visualizar logs | Coordenador | Consultar histórico de operações realizadas no sistema (auditoria). |
+| UC20 | Gerar comprovante | Coordenador | Emitir comprovante de doaï¿½ï¿½o para enviar ao doador. |
+| UC21 | Visualizar logs | Coordenador | Consultar histï¿½rico de operaï¿½ï¿½es realizadas no sistema (auditoria). |
 
-### Validações Automáticas (Sistema)
-| ID | Caso de Uso | Atores | Descrição |
+### Validaï¿½ï¿½es Automï¿½ticas (Sistema)
+| ID | Caso de Uso | Atores | Descriï¿½ï¿½o |
 |----|-------------|--------|-----------|
-| UC22 | Validar CPF único | Sistema | Impedir cadastro de doador com CPF já existente no sistema. |
-| UC23 | Validar e-mail único | Sistema | Impedir cadastro de doador ou usuário com e-mail duplicado. |
-| UC24 | Registrar log automático | Sistema | Registrar todas as ações dos usuários para auditoria. |
-| UC25 | Backup automático | Sistema | Realizar backup diário do banco de dados. |
-| UC26 | Expirar sessão | Sistema | Encerrar sessão após 15 minutos de inatividade. |
+| UC22 | Validar CPF ï¿½nico | Sistema | Impedir cadastro de doador com CPF jï¿½ existente no sistema. |
+| UC23 | Validar e-mail ï¿½nico | Sistema | Impedir cadastro de doador ou usuï¿½rio com e-mail duplicado. |
+| UC24 | Registrar log automï¿½tico | Sistema | Registrar todas as aï¿½ï¿½es dos usuï¿½rios para auditoria. |
+| UC25 | Backup automï¿½tico | Sistema | Realizar backup diï¿½rio do banco de dados. |
+| UC26 | Expirar sessï¿½o | Sistema | Encerrar sessï¿½o apï¿½s 15 minutos de inatividade. |
 
 ## Diagrama Visual
 
